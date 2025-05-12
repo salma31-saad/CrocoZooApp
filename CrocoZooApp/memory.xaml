@@ -8,6 +8,7 @@
              d:DesignHeight="700" d:DesignWidth="1100">
     <Grid>
         <!-- Zigzag pattern background -->
+        <!-- Zigzag pattern background -->
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -122,15 +123,15 @@
                  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,75,75,0"/>
 
         <!-- Difficulty Selection -->
-        <Border Width="651" Height="74" Background="#1A6334" CornerRadius="15" BorderBrush="White" BorderThickness="2"
-                HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
+        <Border Width="600" Height="50" Background="#1A6334" CornerRadius="15" BorderBrush="White" BorderThickness="2"
+                HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0">
             <Grid>
                 <TextBlock Text="NIVEAU DE DIFFICULTÉ:" Foreground="White" FontWeight="Bold" 
                            VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0">
                     <!-- Easy Level -->
-                    <Border x:Name="EasyLevel" Background="#D64541" CornerRadius="10" Width="136" Height="45" Margin="5,0">
+                    <Border x:Name="EasyLevel" Background="#D64541" CornerRadius="10" Width="120" Height="35" Margin="5,0">
                         <Grid>
                             <TextBlock Text="FACILE" Foreground="White" FontWeight="Bold" 
                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -140,7 +141,7 @@
                     </Border>
 
                     <!-- Medium Level -->
-                    <Border x:Name="MediumLevel" Background="#F39C12" CornerRadius="10" Width="136" Height="45" Margin="5,0">
+                    <Border x:Name="MediumLevel" Background="#F39C12" CornerRadius="10" Width="120" Height="35" Margin="5,0">
                         <Grid>
                             <TextBlock Text="MOYEN" Foreground="White" FontWeight="Bold" 
                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -150,7 +151,8 @@
                     </Border>
 
                     <!-- Hard Level -->
-                    <Border x:Name="HardLevel" Background="#9B59B6" CornerRadius="10" Width="136" Height="45" Margin="5,0">
+                    <Border x:Name="HardLevel" Background="#9B59B6" CornerRadius="10" Width="120" Height="35" Margin="5,0" 
+                            BorderBrush="White" BorderThickness="2">
                         <Grid>
                             <TextBlock Text="DIFFICILE" Foreground="White" FontWeight="Bold" 
                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -163,374 +165,171 @@
         </Border>
 
         <!-- Memory Game Grid -->
-        <Border Width="804" Height="397" Background="#1A6334" CornerRadius="20" BorderBrush="White" BorderThickness="3"
-                HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!-- TabControl for different difficulty levels -->
-            <TabControl Background="Transparent" BorderThickness="0" x:Name="DifficultyTabs" Margin="23,10,5,10">
-                <!-- Easy Level Tab (3x2) -->
-                <TabItem Header="Facile" Visibility="Collapsed">
-                    <Grid Margin="15">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+        <Border Width="752" Height="419" Background="#1A6334" CornerRadius="20" BorderBrush="White" BorderThickness="3"
+                HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,163,0,0">
+            <!-- Grid for 4x4 cards (Hard level) -->
+            <Grid Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                        <!-- Easy Level Cards -->
-                        <Border Grid.Row="0" Grid.Column="0" Background="#D64541" CornerRadius="10" Margin="10" x:Name="EasyCard_0_0">
-                            <Grid>
-                                <Image x:Name="EasyCardImage_0_0" Stretch="Uniform" Margin="10" Visibility="Hidden"/>
-                                <Border x:Name="EasyCardBack_0_0" Background="#D64541" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="20"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="0" Grid.Column="1" Background="#D64541" CornerRadius="10" Margin="10" x:Name="EasyCard_0_1">
-                            <Grid>
-                                <Image x:Name="EasyCardImage_0_1" Stretch="Uniform" Margin="10" Visibility="Hidden"/>
-                                <Border x:Name="EasyCardBack_0_1" Background="#D64541" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="20"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="0" Grid.Column="2" Background="#D64541" CornerRadius="10" Margin="10" x:Name="EasyCard_0_2">
-                            <Grid>
-                                <Image x:Name="EasyCardImage_0_2" Stretch="Uniform" Margin="10" Visibility="Hidden"/>
-                                <Border x:Name="EasyCardBack_0_2" Background="#D64541" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="20"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="0" Background="#D64541" CornerRadius="10" Margin="10" x:Name="EasyCard_1_0">
-                            <Grid>
-                                <Image x:Name="EasyCardImage_1_0" Stretch="Uniform" Margin="10" Visibility="Hidden"/>
-                                <Border x:Name="EasyCardBack_1_0" Background="#D64541" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="20"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="1" Background="#D64541" CornerRadius="10" Margin="10" x:Name="EasyCard_1_1">
-                            <Grid>
-                                <Image x:Name="EasyCardImage_1_1" Stretch="Uniform" Margin="10" Visibility="Hidden"/>
-                                <Border x:Name="EasyCardBack_1_1" Background="#D64541" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="20"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="2" Background="#D64541" CornerRadius="10" Margin="10" x:Name="EasyCard_1_2">
-                            <Grid>
-                                <Image x:Name="EasyCardImage_1_2" Stretch="Uniform" Margin="10" Visibility="Hidden"/>
-                                <Border x:Name="EasyCardBack_1_2" Background="#D64541" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="20"/>
-                                </Border>
-                            </Grid>
+                <!-- Memory Cards - Row 1 -->
+                <Border Grid.Row="0" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_0_0">
+                    <Grid>
+                        <Image x:Name="CardImage_0_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_0_0" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\poule.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </TabItem>
+                </Border>
 
-                <!-- Medium Level Tab (4x3) -->
-                <TabItem Header="Moyen" Visibility="Collapsed">
-                    <Grid Margin="15">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <!-- Medium Level Cards (First Row) -->
-                        <Border Grid.Row="0" Grid.Column="0" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_0_0">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_0_0" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_0_0" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="0" Grid.Column="1" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_0_1">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_0_1" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_0_1" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="0" Grid.Column="2" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_0_2">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_0_2" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_0_2" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="0" Grid.Column="3" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_0_3">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_0_3" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_0_3" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <!-- Medium Level Cards (Second Row) -->
-                        <Border Grid.Row="1" Grid.Column="0" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_1_0">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_1_0" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_1_0" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="1" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_1_1">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_1_1" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_1_1" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="2" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_1_2">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_1_2" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_1_2" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="3" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_1_3">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_1_3" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_1_3" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <!-- Medium Level Cards (Third Row) -->
-                        <Border Grid.Row="2" Grid.Column="0" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_2_0">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_2_0" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_2_0" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="2" Grid.Column="1" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_2_1">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_2_1" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_2_1" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="2" Grid.Column="2" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_2_2">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_2_2" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_2_2" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="2" Grid.Column="3" Background="#F39C12" CornerRadius="10" Margin="8" x:Name="MediumCard_2_3">
-                            <Grid>
-                                <Image x:Name="MediumCardImage_2_3" Stretch="Uniform" Margin="8" Visibility="Hidden"/>
-                                <Border x:Name="MediumCardBack_2_3" Background="#F39C12" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="15"/>
-                                </Border>
-                            </Grid>
+                <Border Grid.Row="0" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_0_1">
+                    <Grid>
+                        <Image x:Name="CardImage_0_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_0_1" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\poule.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </TabItem>
+                </Border>
 
-                <!-- Hard Level Tab (4x4) -->
-                <TabItem Header="Difficile" Visibility="Collapsed">
-                    <Grid Margin="15">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <!-- Hard Level Cards (First Row) -->
-                        <Border Grid.Row="0" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_0_0">
-                            <Grid>
-                                <Image x:Name="HardCardImage_0_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_0_0" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="0" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_0_1">
-                            <Grid>
-                                <Image x:Name="HardCardImage_0_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_0_1" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="0" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_0_2">
-                            <Grid>
-                                <Image x:Name="HardCardImage_0_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_0_2" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="0" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_0_3">
-                            <Grid>
-                                <Image x:Name="HardCardImage_0_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_0_3" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <!-- Hard Level Cards (Second Row) -->
-                        <Border Grid.Row="1" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_1_0">
-                            <Grid>
-                                <Image x:Name="HardCardImage_1_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_1_0" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_1_1">
-                            <Grid>
-                                <Image x:Name="HardCardImage_1_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_1_1" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_1_2">
-                            <Grid>
-                                <Image x:Name="HardCardImage_1_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_1_2" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="1" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_1_3">
-                            <Grid>
-                                <Image x:Name="HardCardImage_1_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_1_3" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <!-- Hard Level Cards (Third Row) -->
-                        <Border Grid.Row="2" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_2_0">
-                            <Grid>
-                                <Image x:Name="HardCardImage_2_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_2_0" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="2" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_2_1">
-                            <Grid>
-                                <Image x:Name="HardCardImage_2_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_2_1" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="2" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_2_2">
-                            <Grid>
-                                <Image x:Name="HardCardImage_2_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_2_2" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="2" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_2_3">
-                            <Grid>
-                                <Image x:Name="HardCardImage_2_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_2_3" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <!-- Hard Level Cards (Fourth Row) -->
-                        <Border Grid.Row="3" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_3_0">
-                            <Grid>
-                                <Image x:Name="HardCardImage_3_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_3_0" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="3" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_3_1">
-                            <Grid>
-                                <Image x:Name="HardCardImage_3_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_3_1" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="3" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_3_2">
-                            <Grid>
-                                <Image x:Name="HardCardImage_3_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_3_2" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-
-                        <Border Grid.Row="3" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="HardCard_3_3">
-                            <Grid>
-                                <Image x:Name="HardCardImage_3_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
-                                <Border x:Name="HardCardBack_3_3" Background="#9B59B6" CornerRadius="10">
-                                    <Path Data="M 0,0 L 10,10 M 0,10 L 10,0" Stroke="White" StrokeThickness="2" Stretch="Fill" Margin="10"/>
-                                </Border>
-                            </Grid>
+                <Border Grid.Row="0" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_0_2">
+                    <Grid>
+                        <Image x:Name="CardImage_0_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_0_2" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\vache.png" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </TabItem>
-            </TabControl>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_0_3">
+                    <Grid>
+                        <Image x:Name="CardImage_0_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_0_3" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\vache.png" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!-- Memory Cards - Row 2 -->
+                <Border Grid.Row="1" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_1_0">
+                    <Grid>
+                        <Image x:Name="CardImage_1_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_1_0" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\lion.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_1_1">
+                    <Grid>
+                        <Image x:Name="CardImage_1_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_1_1" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\lion.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_1_2">
+                    <Grid>
+                        <Image x:Name="CardImage_1_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_1_2" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\elephant.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_1_3">
+                    <Grid>
+                        <Image x:Name="CardImage_1_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_1_3" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\elephant.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!-- Memory Cards - Row 3 -->
+                <Border Grid.Row="2" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_2_0">
+                    <Grid>
+                        <Image x:Name="CardImage_2_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_2_0" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\crocodile.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="2" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_2_1">
+                    <Grid>
+                        <Image x:Name="CardImage_2_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_2_1" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\crocodile.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="2" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_2_2">
+                    <Grid>
+                        <Image x:Name="CardImage_2_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_2_2" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chien.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="2" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_2_3">
+                    <Grid>
+                        <Image x:Name="CardImage_2_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_2_3" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chien.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!-- Memory Cards - Row 4 -->
+                <Border Grid.Row="3" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_3_0">
+                    <Grid>
+                        <Image x:Name="CardImage_3_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_3_0" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chat.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="3" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_3_1">
+                    <Grid>
+                        <Image x:Name="CardImage_3_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_3_1" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chat.jfif" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="3" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_3_2">
+                    <Grid>
+                        <Image x:Name="CardImage_3_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_3_2" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\cheval.jpg" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="3" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_3_3">
+                    <Grid>
+                        <Image x:Name="CardImage_3_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
+                        <Border x:Name="CardBack_3_3" Background="#9B59B6" CornerRadius="10">
+                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\cheval.jpg" Stretch="Uniform" Margin="5"/>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
         </Border>
 
         <!-- Bottom Controls -->
