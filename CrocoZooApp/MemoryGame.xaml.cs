@@ -47,21 +47,33 @@ namespace CrocoZooApp
         private void Timer_Tick(object sender, EventArgs e)
         {
             timeElapsed = timeElapsed.Add(TimeSpan.FromSeconds(1));
-            timerTextBlock.Text = timeElapsed.ToString(@"mm\:ss");
+            TimerText.Text = timeElapsed.ToString(@"mm\:ss");
         }
 
         private void StartGame_Click(object sender, RoutedEventArgs e)
         {
-            string level = (difficultyComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-            if (level == null)
+            // Trouver l'élément Border sélectionné, en utilisant la source d'événement
+            var selectedBorder = sender as Border;
+            if (selectedBorder == null)
             {
                 MessageBox.Show("Veuillez sélectionner une difficulté.");
                 return;
             }
 
+            // Récupérer le TextBlock qui contient le nom du niveau
+            var textBlock = selectedBorder.FindName("TextBlock") as TextBlock;
+            if (textBlock == null)
+            {
+                MessageBox.Show("Erreur de sélection du niveau.");
+                return;
+            }
+
+            // Extraire le texte du TextBlock pour le niveau sélectionné
+            string level = textBlock.Text;
             SetupBoard(level);
             StartNewGame();
         }
+
 
         private void SetupBoard(string difficulty)
         {
@@ -78,7 +90,7 @@ namespace CrocoZooApp
 
         private void CreateBoard(int rows, int cols)
         {
-            gameBoard = gameGrid;
+            gameBoard = GameGrid;
             gameBoard.Children.Clear();
             gameBoard.RowDefinitions.Clear();
             gameBoard.ColumnDefinitions.Clear();
@@ -92,8 +104,8 @@ namespace CrocoZooApp
             cards = new List<MemoryCard>();
             totalPairs = (rows * cols) / 2;
             pairsFound = 0;
-            pairsFoundTextBlock.Text = "Paires trouvées : 0";
-            timerTextBlock.Text = "00:00";
+            ScoreText.Text = "Paires trouvées : 0";
+            TimerText.Text = "00:00";
             timeElapsed = TimeSpan.Zero;
             gameTimer.Start();
 
@@ -186,7 +198,7 @@ namespace CrocoZooApp
                 if (firstCard.ImagePath == secondCard.ImagePath)
                 {
                     pairsFound++;
-                    pairsFoundTextBlock.Text = $"Paires trouvées : {pairsFound}";
+                    ScoreText.Text = $"Paires trouvées : {pairsFound}";
                     firstCard = secondCard = null;
 
                     if (pairsFound == totalPairs)
@@ -211,7 +223,7 @@ namespace CrocoZooApp
             secondCard = null;
             gameTimer.Stop();
             timeElapsed = TimeSpan.Zero;
-            timerTextBlock.Text = "00:00";
+            TimerText.Text = "00:00";
         }
     }
 
@@ -221,4 +233,6 @@ namespace CrocoZooApp
         public bool IsFlipped { get; set; }
         public Button Button { get; set; }
     }
+
+
 }

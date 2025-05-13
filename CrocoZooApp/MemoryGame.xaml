@@ -122,13 +122,15 @@
         <Ellipse Width="20" Height="20" Fill="White" 
            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,75,75,0"/>
 
+        
+        
         <!-- Difficulty Selection -->
         <Border Width="600" Height="50" Background="#1A6334" CornerRadius="15" BorderBrush="White" BorderThickness="2"
           HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0">
-            <Grid>
+            <Grid  x:Name="difficultyBox">
                 <TextBlock Text="NIVEAU DE DIFFICULTÉ:" Foreground="White" FontWeight="Bold" 
                      VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0">
                     <!-- Easy Level -->
                     <Border x:Name="EasyLevel" Background="#D64541" CornerRadius="10" Width="120" Height="35" Margin="5,0">
@@ -168,7 +170,7 @@
         <Border Width="752" Height="419" Background="#1A6334" CornerRadius="20" BorderBrush="White" BorderThickness="3"
           HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,163,0,0">
             <!-- Grid for 4x4 cards (Hard level) -->
-            <Grid Margin="15">
+            <Grid Margin="15"  x:Name="GameGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
