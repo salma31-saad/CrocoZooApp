@@ -12,11 +12,21 @@ using System.Windows.Shapes;
 namespace CrocoZooApp;
 
 
-    public partial class WelcomePage : Window
+    public partial class WelcomePage : UserControl
     {
-        public WelcomePage()
-        {
-            InitializeComponent();
-           
-        }
+
+    private Frame _mainFrame;
+
+    public WelcomePage(Frame mainFrame)
+    {
+        InitializeComponent();
+        _mainFrame = mainFrame;
     }
+
+    private void WelcomeButton_Click(object sender, RoutedEventArgs e)
+    {
+        // Naviguer vers mode.xaml (UserControl)
+        _mainFrame.Content = new mode(_mainFrame);
+    }
+
+}

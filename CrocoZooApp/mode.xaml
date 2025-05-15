@@ -79,7 +79,7 @@
                 <!-- Home Button -->
                 <Button Width="40" Height="40" HorizontalAlignment="Left" Margin="10,5,0,5" 
                         Background="#2A8A4F" BorderBrush="White" BorderThickness="2" 
-                        ToolTip="Retour au menu principal">
+                        ToolTip="Retour au menu principal"  Click="BackToWelcome_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="{TemplateBinding Background}" 

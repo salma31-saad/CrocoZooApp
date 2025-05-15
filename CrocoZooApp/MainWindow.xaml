@@ -115,12 +115,19 @@
         <Border Width="500" Height="200" Background="Black" CornerRadius="50"
                 HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
             <!-- Welcome Text Box -->
-            <Border Width="400" Height="50" Background="White" VerticalAlignment="Center">
+            <Button Width="400" Height="50" Background="White" VerticalAlignment="Center"
+        Click="WelcomeButton_Click">
                 <TextBlock Text="SALUT LES COPAINS ET BIENVENUE A CROCOZOO" 
-                           FontWeight="Bold" FontSize="14"
-                           TextAlignment="Center" VerticalAlignment="Center"/>
-            </Border>
+               FontWeight="Bold" FontSize="14"
+               TextAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
         </Border>
+
+        <Grid>
+            <!-- Frame pour afficher les pages / UserControls -->
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+
 
         <!-- Top Teeth -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,200">

@@ -13,16 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace CrocoZooApp
 {
     /// <summary>
     /// Logique d'interaction pour menu.xaml
     /// </summary>
-    public partial class menu : UserControl
+    public partial class mode : UserControl
     {
-        public menu()
+        private Frame _mainFrame;
+        public mode()
         {
             InitializeComponent();
+            _mainFrame = mainFrame;
+        }
+        private void BackToWelcome_Click(object sender, RoutedEventArgs e)
+        {
+              MainFrame.Content = new mode();
         }
     }
 }
