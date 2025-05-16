@@ -19,17 +19,25 @@ namespace CrocoZooApp
     /// <summary>
     /// Logique d'interaction pour menu.xaml
     /// </summary>
-    public partial class mode : UserControl
+    public partial class mode : Window
     {
-        private Frame _mainFrame;
+
+        //private Frame _mainFrame;
+        //public mode(Frame mainFrame)
+        //{
+        //    InitializeComponent();
+        //   _mainFrame = mainFrame;
+        //}
+
         public mode()
         {
             InitializeComponent();
-            _mainFrame = mainFrame;
+
         }
         private void BackToWelcome_Click(object sender, RoutedEventArgs e)
         {
-              MainFrame.Content = new mode();
+            MainWindow mainWindowPage = new MainWindow();
+            mainWindowPage.Show();
         }
     }
 }

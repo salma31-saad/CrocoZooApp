@@ -1,4 +1,4 @@
-﻿<Window x:Class="CrocoZooApp.WelcomePage"
+﻿<Window x:Class="CrocoZooApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Bienvenue à CrocoZoo" Height="500" Width="800"
@@ -6,7 +6,7 @@
 
     <Grid>
         <!-- Zigzag pattern background -->
-        <Grid>
+        <Grid x:Name="grid_Window">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
