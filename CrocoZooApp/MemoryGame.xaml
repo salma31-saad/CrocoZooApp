@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="CrocoZooApp.MemoryGame"
+﻿<Window x:Class="CrocoZooApp.MemoryGame"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -362,4 +362,4 @@
             </Grid>
         </Border>
     </Grid>
-</UserControl>
+</Window>

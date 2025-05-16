@@ -39,5 +39,12 @@ namespace CrocoZooApp
             MainWindow mainWindowPage = new MainWindow();
             mainWindowPage.Show();
         }
+
+        private void MemoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            MemoryGame memorygameWindowPage = new MemoryGame();
+            memorygameWindowPage.Show();
+        }
+
     }
 }
