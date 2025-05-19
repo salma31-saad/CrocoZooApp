@@ -19,7 +19,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CrocoZooApp
 {
-    public partial class MemoryGame : UserControl
+    public partial class MemoryGame : Window
     {
         private List<MemoryCard> cards;
         private MemoryCard firstCard, secondCard;
@@ -52,26 +52,15 @@ namespace CrocoZooApp
 
         private void StartGame_Click(object sender, RoutedEventArgs e)
         {
-            // Trouver l'élément Border sélectionné, en utilisant la source d'événement
-            var selectedBorder = sender as Border;
-            if (selectedBorder == null)
+            if (sender is Button btn && btn.Tag is string difficulty)
             {
-                MessageBox.Show("Veuillez sélectionner une difficulté.");
-                return;
+                StartNewGame();  // Réinitialise le jeu
+                SetupBoard(difficulty);  // Crée la grille selon la difficulté
             }
-
-            // Récupérer le TextBlock qui contient le nom du niveau
-            var textBlock = selectedBorder.FindName("TextBlock") as TextBlock;
-            if (textBlock == null)
+            else
             {
-                MessageBox.Show("Erreur de sélection du niveau.");
-                return;
+                MessageBox.Show("Veuillez sélectionner une difficulté valide.");
             }
-
-            // Extraire le texte du TextBlock pour le niveau sélectionné
-            string level = textBlock.Text;
-            SetupBoard(level);
-            StartNewGame();
         }
 
 
@@ -216,6 +205,8 @@ namespace CrocoZooApp
                 }
             }
         }
+
+      
 
         private void StartNewGame()
         {

@@ -8,7 +8,6 @@
              d:DesignHeight="700" d:DesignWidth="1100">
     <Grid>
         <!-- Zigzag pattern background -->
-        <!-- Zigzag pattern background -->
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -122,46 +121,46 @@
         <Ellipse Width="20" Height="20" Fill="White" 
            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,75,75,0"/>
 
-        
-        
+
+
         <!-- Difficulty Selection -->
         <Border Width="600" Height="50" Background="#1A6334" CornerRadius="15" BorderBrush="White" BorderThickness="2"
           HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0">
             <Grid  x:Name="difficultyBox">
                 <TextBlock Text="NIVEAU DE DIFFICULTÉ:" Foreground="White" FontWeight="Bold" 
                      VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                
+
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0">
                     <!-- Easy Level -->
-                    <Border x:Name="EasyLevel" Background="#D64541" CornerRadius="10" Width="120" Height="35" Margin="5,0">
+                    <Button x:Name="EasyLevel" Background="#D64541" Width="120" Height="35" Margin="5,0" Click="StartGame_Click" Tag="Facile">
                         <Grid>
                             <TextBlock Text="FACILE" Foreground="White" FontWeight="Bold" 
                                  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock Text="(3x2)" Foreground="White" FontSize="10"
                                  HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,3"/>
                         </Grid>
-                    </Border>
+                    </Button>
 
                     <!-- Medium Level -->
-                    <Border x:Name="MediumLevel" Background="#F39C12" CornerRadius="10" Width="120" Height="35" Margin="5,0">
+                    <Button x:Name="MediumLevel" Background="#F39C12"  Width="120" Height="35" Margin="5,0" Click="StartGame_Click" Tag="Moyen">
                         <Grid>
                             <TextBlock Text="MOYEN" Foreground="White" FontWeight="Bold" 
                                  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock Text="(4x3)" Foreground="White" FontSize="10"
                                  HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,3"/>
                         </Grid>
-                    </Border>
+                    </Button>
 
                     <!-- Hard Level -->
-                    <Border x:Name="HardLevel" Background="#9B59B6" CornerRadius="10" Width="120" Height="35" Margin="5,0" 
-                      BorderBrush="White" BorderThickness="2">
+                    <Button x:Name="HardLevel" Background="#9B59B6" Width="120" Height="35" Margin="5,0" 
+                      BorderBrush="White" Click="StartGame_Click" Tag="Difficile">
                         <Grid>
                             <TextBlock Text="DIFFICILE" Foreground="White" FontWeight="Bold" 
                                  HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock Text="(4x4)" Foreground="White" FontSize="10"
                                  HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,3"/>
                         </Grid>
-                    </Border>
+                    </Button>
                 </StackPanel>
             </Grid>
         </Border>
@@ -338,14 +337,29 @@
         <Border Background="#1A6334" Height="60" VerticalAlignment="Bottom">
             <Grid>
                 <Button Content="NOUVELLE PARTIE" Background="#D64541" Foreground="White" FontWeight="Bold"
-                  Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"
-                  BorderBrush="White" BorderThickness="2" x:Name="NewGameButton">
+                  Width="150" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                  BorderBrush="White" BorderThickness="2" x:Name="NewGameButton" Margin="34,0,0,0">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="{TemplateBinding Background}" 
                               BorderBrush="{TemplateBinding BorderBrush}" 
                               BorderThickness="{TemplateBinding BorderThickness}"
                               CornerRadius="20">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Content="COMMENCEZ" Background="#D64541" Foreground="White" FontWeight="Bold"
+                       Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       BorderBrush="White" BorderThickness="2" x:Name="StartGame" Click="StartGame_Click">        
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" 
+                           BorderBrush="{TemplateBinding BorderBrush}" 
+                           BorderThickness="{TemplateBinding BorderThickness}"
+                           CornerRadius="20">   
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
