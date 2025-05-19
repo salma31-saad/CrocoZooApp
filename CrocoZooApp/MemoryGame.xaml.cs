@@ -1,21 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using CrocoZooApp.CrocoZooDB;
-using CrocoZooApp.DAO;
 using System.Windows.Threading;
-using Microsoft.EntityFrameworkCore;
+using CrocoZooApp.DAO;
+using CrocoZooApp.CrocoZooDB;
+using Microsoft.VisualBasic.ApplicationServices;
+using System.Diagnostics;
 
 namespace CrocoZooApp
 {
@@ -28,7 +22,6 @@ namespace CrocoZooApp
         private int pairsFound;
         private int totalPairs;
         private Random rand = new Random();
-        private Grid gameBoard;
 
         public MemoryGame()
         {
@@ -50,45 +43,43 @@ namespace CrocoZooApp
             TimerText.Text = timeElapsed.ToString(@"mm\:ss");
         }
 
+        // Boutons avec Tag="Facile", "Moyen", "Difficile"
         private void StartGame_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button btn && btn.Tag is string difficulty)
+            if (sender is Button button && button.Tag is string difficulty)
             {
-                StartNewGame();  // Réinitialise le jeu
-                SetupBoard(difficulty);  // Crée la grille selon la difficulté
+               
+                SetupBoard(difficulty);
             }
             else
             {
-                MessageBox.Show("Veuillez sélectionner une difficulté valide.");
+                MessageBox.Show("Veuillez sélectionner une difficulté.");
             }
         }
-
 
         private void SetupBoard(string difficulty)
         {
             switch (difficulty)
             {
-                case "Facile":
-                    CreateBoard(4, 4); break;
-                case "Moyen":
-                    CreateBoard(6, 6); break;
-                case "Difficile":
-                    CreateBoard(8, 8); break;
+                case "Facile": CreateBoard(2, 3); break;  // 3 paires
+                case "Moyen": CreateBoard(3, 4); break;   // 6 paires
+                case "Difficile": CreateBoard(4, 4); break; // 8 paires
+                default: MessageBox.Show("Difficulté inconnue."); break;
             }
         }
 
         private void CreateBoard(int rows, int cols)
         {
-            gameBoard = GameGrid;
-            gameBoard.Children.Clear();
-            gameBoard.RowDefinitions.Clear();
-            gameBoard.ColumnDefinitions.Clear();
+
+            GameGrid.Children.Clear();
+            GameGrid.RowDefinitions.Clear();
+            GameGrid.ColumnDefinitions.Clear();
 
             for (int i = 0; i < rows; i++)
-                gameBoard.RowDefinitions.Add(new RowDefinition());
+                GameGrid.RowDefinitions.Add(new RowDefinition());
 
             for (int j = 0; j < cols; j++)
-                gameBoard.ColumnDefinitions.Add(new ColumnDefinition());
+                GameGrid.ColumnDefinitions.Add(new ColumnDefinition());
 
             cards = new List<MemoryCard>();
             totalPairs = (rows * cols) / 2;
@@ -111,7 +102,7 @@ namespace CrocoZooApp
                     var btn = CreateCardButton(card);
                     Grid.SetRow(btn, row);
                     Grid.SetColumn(btn, col);
-                    gameBoard.Children.Add(btn);
+                    GameGrid.Children.Add(btn);
                     card.Button = btn;
                     cards.Add(card);
                 }
@@ -120,10 +111,12 @@ namespace CrocoZooApp
 
         private Button CreateCardButton(MemoryCard card)
         {
-            var btn = new Button();
+            var btn = new Button
+            {
+                Tag = card,
+                Content = CreateImage("/Images/back.png")
+            };
             btn.Click += Card_Click;
-            btn.Tag = card;
-            btn.Content = CreateImage("/Images/back.png");
             return btn;
         }
 
@@ -138,36 +131,23 @@ namespace CrocoZooApp
 
         private List<string> LoadAnimalImages()
         {
-            // Remplace par tes vrais chemins d’images
             return new List<string>
             {
-                "/Images/lion.png",
-                "/Images/tigre.png",
-                "/Images/elephant.png",
-                "/Images/zebra.png",
-                "/Images/singe.png",
-                "/Images/girafe.png",
-                "/Images/hippo.png",
-                "/Images/crocodile.png",
-                "/Images/ours.png",
-                "/Images/koala.png",
-                "/Images/renard.png",
-                "/Images/loup.png",
-                "/Images/panda.png",
-                "/Images/rhino.png",
-                "/Images/autruche.png",
-                "/Images/aigle.png",
-                "/Images/cheval.png",
-                "/Images/vache.png",
-                "/Images/cochon.png",
-                "/Images/chien.png"
+                "C:\\Users\\SLAB70\\OneDrive - Saint Michel\\projets CrocoZoo\\poule.jfif",
+                "C:\\Users\\SLAB70\\OneDrive - Saint Michel\\projets CrocoZoo\\vache.png",
+                "C:\\Users\\SLAB70\\OneDrive - Saint Michel\\projets CrocoZoo\\lion.jfif",
+                "C:\\Users\\SLAB70\\OneDrive - Saint Michel\\projets CrocoZoo\\elephant.jfif",
+                "C:\\Users\\SLAB70\\OneDrive - Saint Michel\\projets CrocoZoo\\crocodile.jfif",
+                "C:\\Users\\SLAB70\\OneDrive - Saint Michel\\projets CrocoZoo\\chien.jfif",
+                "C:\\Users\\SLAB70\\OneDrive - Saint Michel\\projets CrocoZoo\\chat.jfif",
+                "C:\\Users\\SLAB70\\OneDrive - Saint Michel\\projets CrocoZoo\\cheval.jpg",
             };
         }
 
         private async void Card_Click(object sender, RoutedEventArgs e)
         {
-            var button = sender as Button;
-            var card = button.Tag as MemoryCard;
+            if (sender is not Button button || button.Tag is not MemoryCard card)
+                return;
 
             if (card.IsFlipped || secondCard != null)
                 return;
@@ -182,7 +162,7 @@ namespace CrocoZooApp
             else
             {
                 secondCard = card;
-                await Task.Delay(800); // Laisse le temps de voir
+                await Task.Delay(800);
 
                 if (firstCard.ImagePath == secondCard.ImagePath)
                 {
@@ -198,7 +178,8 @@ namespace CrocoZooApp
                 }
                 else
                 {
-                    firstCard.IsFlipped = secondCard.IsFlipped = false;
+                    firstCard.IsFlipped = false;
+                    secondCard.IsFlipped = false;
                     firstCard.Button.Content = CreateImage("/Images/back.png");
                     secondCard.Button.Content = CreateImage("/Images/back.png");
                     firstCard = secondCard = null;
@@ -216,6 +197,11 @@ namespace CrocoZooApp
             timeElapsed = TimeSpan.Zero;
             TimerText.Text = "00:00";
         }
+
+        private void StartNewGame(object sender, RoutedEventArgs e)
+        {
+            StartNewGame(); // Appelle la version sans paramètre
+        }
     }
 
     public class MemoryCard
@@ -224,6 +210,4 @@ namespace CrocoZooApp
         public bool IsFlipped { get; set; }
         public Button Button { get; set; }
     }
-
-
 }

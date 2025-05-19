@@ -184,152 +184,152 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Memory Cards - Row 1 -->
-                <Border Grid.Row="0" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_0_0">
+                <Button Grid.Row="0" Grid.Column="0" Background="#9B59B6" Margin="5" x:Name="Card_0_0">
                     <Grid>
                         <Image x:Name="CardImage_0_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_0_0" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\poule.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="0" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_0_1">
+                <Button Grid.Row="0" Grid.Column="1" Background="#9B59B6" Margin="5" x:Name="Card_0_1">
                     <Grid>
                         <Image x:Name="CardImage_0_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_0_1" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\poule.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="0" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_0_2">
+                <Button Grid.Row="0" Grid.Column="2" Background="#9B59B6" Margin="5" x:Name="Card_0_2">
                     <Grid>
                         <Image x:Name="CardImage_0_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_0_2" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\vache.png" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="0" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_0_3">
+                <Button Grid.Row="0" Grid.Column="3" Background="#9B59B6" Margin="5" x:Name="Card_0_3">
                     <Grid>
                         <Image x:Name="CardImage_0_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_0_3" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\vache.png" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
                 <!-- Memory Cards - Row 2 -->
-                <Border Grid.Row="1" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_1_0">
+                <Button Grid.Row="1" Grid.Column="0" Background="#9B59B6" Margin="5" x:Name="Card_1_0">
                     <Grid>
                         <Image x:Name="CardImage_1_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_1_0" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\lion.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="1" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_1_1">
+                <Button Grid.Row="1" Grid.Column="1" Background="#9B59B6" Margin="5" x:Name="Card_1_1">
                     <Grid>
                         <Image x:Name="CardImage_1_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_1_1" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\lion.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="1" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_1_2">
+                <Button Grid.Row="1" Grid.Column="2" Background="#9B59B6" Margin="5" x:Name="Card_1_2">
                     <Grid>
                         <Image x:Name="CardImage_1_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_1_2" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\elephant.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="1" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_1_3">
+                <Button Grid.Row="1" Grid.Column="3" Background="#9B59B6" Margin="5" x:Name="Card_1_3">
                     <Grid>
                         <Image x:Name="CardImage_1_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_1_3" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\elephant.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
                 <!-- Memory Cards - Row 3 -->
-                <Border Grid.Row="2" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_2_0">
+                <Button Grid.Row="2" Grid.Column="0" Background="#9B59B6" Margin="5" x:Name="Card_2_0">
                     <Grid>
                         <Image x:Name="CardImage_2_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_2_0" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\crocodile.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="2" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_2_1">
+                <Button Grid.Row="2" Grid.Column="1" Background="#9B59B6" Margin="5" x:Name="Card_2_1">
                     <Grid>
                         <Image x:Name="CardImage_2_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_2_1" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\crocodile.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="2" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_2_2">
+                <Button Grid.Row="2" Grid.Column="2" Background="#9B59B6" Margin="5" x:Name="Card_2_2">
                     <Grid>
                         <Image x:Name="CardImage_2_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_2_2" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chien.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="2" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_2_3">
+                <Button Grid.Row="2" Grid.Column="3" Background="#9B59B6" Margin="5" x:Name="Card_2_3">
                     <Grid>
                         <Image x:Name="CardImage_2_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_2_3" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chien.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
                 <!-- Memory Cards - Row 4 -->
-                <Border Grid.Row="3" Grid.Column="0" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_3_0">
+                <Button Grid.Row="3" Grid.Column="0" Background="#9B59B6" Margin="5" x:Name="Card_3_0">
                     <Grid>
                         <Image x:Name="CardImage_3_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_3_0" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chat.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="3" Grid.Column="1" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_3_1">
+                <Button Grid.Row="3" Grid.Column="1" Background="#9B59B6" Margin="5" x:Name="Card_3_1">
                     <Grid>
                         <Image x:Name="CardImage_3_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_3_1" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chat.jfif" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="3" Grid.Column="2" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_3_2">
+                <Button Grid.Row="3" Grid.Column="2" Background="#9B59B6" Margin="5" x:Name="Card_3_2">
                     <Grid>
                         <Image x:Name="CardImage_3_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_3_2" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\cheval.jpg" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
 
-                <Border Grid.Row="3" Grid.Column="3" Background="#9B59B6" CornerRadius="10" Margin="5" x:Name="Card_3_3">
+                <Button Grid.Row="3" Grid.Column="3" Background="#9B59B6" Margin="5" x:Name="Card_3_3">
                     <Grid>
                         <Image x:Name="CardImage_3_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_3_3" Background="#9B59B6" CornerRadius="10">
                             <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\cheval.jpg" Stretch="Uniform" Margin="5"/>
                         </Border>
                     </Grid>
-                </Border>
+                </Button>
             </Grid>
         </Border>
 
@@ -338,7 +338,7 @@
             <Grid>
                 <Button Content="NOUVELLE PARTIE" Background="#D64541" Foreground="White" FontWeight="Bold"
                   Width="150" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center"
-                  BorderBrush="White" BorderThickness="2" x:Name="NewGameButton" Margin="34,0,0,0">
+                  BorderBrush="White" BorderThickness="2" x:Name="NewGameButton" Margin="34,0,0,0" Click="StartNewGame">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="{TemplateBinding Background}" 
@@ -353,7 +353,7 @@
 
                 <Button Content="COMMENCEZ" Background="#D64541" Foreground="White" FontWeight="Bold"
                        Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       BorderBrush="White" BorderThickness="2" x:Name="StartGame" Click="StartGame_Click">        
+                       BorderBrush="White" BorderThickness="2"  Click="StartGame_Click" x:Name="StartGame">        
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="{TemplateBinding Background}" 
