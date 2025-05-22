@@ -188,7 +188,7 @@
                     <Grid>
                         <Image x:Name="CardImage_0_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_0_0" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\poule.jfif" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -197,7 +197,7 @@
                     <Grid>
                         <Image x:Name="CardImage_0_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_0_1" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\poule.jfif" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -206,7 +206,7 @@
                     <Grid>
                         <Image x:Name="CardImage_0_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_0_2" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\vache.png" Stretch="Uniform" Margin="5"/>
+                          
                         </Border>
                     </Grid>
                 </Button>
@@ -215,7 +215,7 @@
                     <Grid>
                         <Image x:Name="CardImage_0_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_0_3" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\vache.png" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -225,7 +225,7 @@
                     <Grid>
                         <Image x:Name="CardImage_1_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_1_0" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\lion.jfif" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -234,7 +234,7 @@
                     <Grid>
                         <Image x:Name="CardImage_1_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_1_1" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\lion.jfif" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -243,7 +243,7 @@
                     <Grid>
                         <Image x:Name="CardImage_1_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_1_2" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\elephant.jfif" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -252,7 +252,7 @@
                     <Grid>
                         <Image x:Name="CardImage_1_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_1_3" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\elephant.jfif" Stretch="Uniform" Margin="5"/>
+                          
                         </Border>
                     </Grid>
                 </Button>
@@ -262,7 +262,7 @@
                     <Grid>
                         <Image x:Name="CardImage_2_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_2_0" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\crocodile.jfif" Stretch="Uniform" Margin="5"/>
+                          
                         </Border>
                     </Grid>
                 </Button>
@@ -271,7 +271,7 @@
                     <Grid>
                         <Image x:Name="CardImage_2_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_2_1" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\crocodile.jfif" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -280,7 +280,7 @@
                     <Grid>
                         <Image x:Name="CardImage_2_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_2_2" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chien.jfif" Stretch="Uniform" Margin="5"/>
+                          
                         </Border>
                     </Grid>
                 </Button>
@@ -289,7 +289,7 @@
                     <Grid>
                         <Image x:Name="CardImage_2_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_2_3" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chien.jfif" Stretch="Uniform" Margin="5"/>
+                            
                         </Border>
                     </Grid>
                 </Button>
@@ -299,7 +299,7 @@
                     <Grid>
                         <Image x:Name="CardImage_3_0" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_3_0" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chat.jfif" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -308,7 +308,7 @@
                     <Grid>
                         <Image x:Name="CardImage_3_1" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_3_1" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\chat.jfif" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -317,7 +317,7 @@
                     <Grid>
                         <Image x:Name="CardImage_3_2" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_3_2" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\cheval.jpg" Stretch="Uniform" Margin="5"/>
+                           
                         </Border>
                     </Grid>
                 </Button>
@@ -326,7 +326,7 @@
                     <Grid>
                         <Image x:Name="CardImage_3_3" Stretch="Uniform" Margin="5" Visibility="Hidden"/>
                         <Border x:Name="CardBack_3_3" Background="#9B59B6" CornerRadius="10">
-                            <Image Source="C:\Users\SLAB70\OneDrive - Saint Michel\projets CrocoZoo\cheval.jpg" Stretch="Uniform" Margin="5"/>
+                          
                         </Border>
                     </Grid>
                 </Button>
